@@ -112,7 +112,7 @@ function Prompt1() { //collects the user's choice- length of characters
     //}// else {   //else if (lengthChoice < 8 || lengthChoice > 128)
      // alert("Please choose a number between 8 and 128");
       //return ;
-    //}
+    //} 
     if (lengthChoice < 8 || lengthChoice > 128) {
       alert("password must be between 8 and 128 characters, please try again")
       Prompt1();
