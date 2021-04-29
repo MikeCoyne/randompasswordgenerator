@@ -102,18 +102,21 @@ function Prompt1() { //collects the user's choice- length of characters
   // console.log(typeof(lengthChoice)) //was using parseInt, but now requiring user to enter interger (or retry)
   if (lengthChoice == null) {
     alert("try again?") 
-    return getPrompt1();
+    return ;
 //                                                                     .....................how to get so "cancel" will end program???
-  }   else if (lengthChoice >= 8 && lengthChoice <= 128) {
+  } //  else if (lengthChoice >= 8 && lengthChoice <= 128) {
     //if (lengthChoice < 8 || lengthChoice > 128) ;//                   .......else if does not return a function....
     // return getPrompt1();;
     //  console.log(lengthChoice + " is acceptable")
      //continue;
-    } else {   //else if (lengthChoice < 8 || lengthChoice > 128)
-      alert("Please choose a number between 8 and 128");
-      return getPrompt1();
-    }
-
+    //}// else {   //else if (lengthChoice < 8 || lengthChoice > 128)
+     // alert("Please choose a number between 8 and 128");
+      //return ;
+    //}
+    if (lengthChoice < 8 || lengthChoice > 128) {
+      alert("password must be between 8 and 128 characters, please try again")
+      Prompt1();
+    } 
     return lengthChoice;
 
 }
